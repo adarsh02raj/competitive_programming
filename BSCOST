@@ -1,0 +1,36 @@
+//Binary String Cost
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		int n,x,y,one=0,zero=0;
+		cin>>n>>x>>y;
+		string s;
+		cin.ignore();
+		getline(cin, s);
+		for(int i=s.size()-1; i>=0; i--){
+			if(s[i]=='1')
+				one++;
+			else
+				zero++;
+		}
+		if(x>y){
+			if(one>0 && zero>0)
+				cout<<y<<endl;
+			else
+				cout<<0<<endl;
+		}
+		else{
+			if(one>0 && zero>0)
+				cout<<x<<endl;
+			else
+				cout<<0<<endl;
+		}
+
+	}
+
+	return 0;
+}
